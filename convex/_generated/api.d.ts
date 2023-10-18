@@ -14,7 +14,6 @@ import type {
   FilterApi,
   FunctionReference,
 } from "convex/server";
-import type * as auth_config from "../auth/config";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -24,9 +23,7 @@ import type * as auth_config from "../auth/config";
  * const myFunctionReference = api.myModule.myFunction;
  * ```
  */
-declare const fullApi: ApiFromModules<{
-  "auth/config": typeof auth_config;
-}>;
+declare const fullApi: ApiFromModules<{}>;
 export declare const api: FilterApi<
   typeof fullApi,
   FunctionReference<any, "public">
